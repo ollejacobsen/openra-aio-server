@@ -20,8 +20,8 @@ Then on every `docker run ...`
 ```bash
 $ docker run -d -p 1234:1234 \
     -e GAME="RedAlert" \
-    -e RELEASE_VERSION="20250330" \
-    -e Name="AIO OpenRa, RedAlert in Docker" \
+    -e RELEASE_VERSION="latest" \
+    -e Name="OpenRA AIO - RedAlert in Docker" \
     -v ./downloads:/downloads \
     --name openra-aio-ra \
     ollebulle/openra-aio-server:latest
