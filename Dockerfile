@@ -33,3 +33,10 @@ VOLUME [ "/downloads" ]
 VOLUME [ "/support_dir" ]
 
 ENTRYPOINT ["/entrypoint.sh"]
+
+LABEL org.opencontainers.image.title="OpenRA AIO Server" \
+      org.opencontainers.image.description="Dockerized environment for running OpenRA-based game servers" \
+      org.opencontainers.image.authors="Olle" \
+      org.opencontainers.image.source="https://github.com/ollejacobsen/openra-aio-server" \
+      org.opencontainers.image.documentation="https://github.com/ollejacobsen/openra-aio-server#readme" \
+      org.opencontainers.image.licenses="MIT"
