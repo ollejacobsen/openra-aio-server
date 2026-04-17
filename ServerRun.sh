@@ -35,16 +35,18 @@ if [ -n "$MOTD" ]; then
   echo "$MOTD" > "${SUPPORT_DIR}/motd.txt"
 fi
 
-dirSegment="openra" 
+dirSegment="openra"
+utility="${dirSegment}-ra-utility"
 if [ "$LAUNCH_MOD" = "hv" ]; then
         dirSegment="openhv"
+        utility="${dirSegment}-utility"
 fi
 
 # Run the game or server
 if [ -n "$1" ] && [ "$1" = "--utility" ]; then
         # Drop the --utility argument
         shift
-        "${HERE}/usr/bin/${dirSegment}-ra-utility" "$@"
+        "${HERE}/usr/bin/${utility}" "$@"
 else
         "${HERE}/usr/lib/${dirSegment}/OpenRA.Server" Game.Mod="${LAUNCH_MOD}" \
         Server.Name="$NAME" \
