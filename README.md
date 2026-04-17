@@ -32,23 +32,25 @@ $ docker run -d -p 1234:1234 \
 | ------------- | ------------- |  ------------- | 
 | GAME  | `RedAlert`  | `string:RedAlert\|Dune2000\|TiberianDawn\|TiberianDawnHD\|CombinedArms\|HardVacuum` |
 | RELEASE_VERSION  | `latest`  | `string:latest\|release-20250330\|playtest-20260222\|<github-release-tag>` |
-|  |  |   | 
-| NAME  | `Dedicated AIO Server`  | `string` |
 | MOTD  | `Welcome, have fun and good luck!`  | `string` |
-| MAP  | `<empty>`  | `UID:6e8f4e02-c91c-465f-b22d-7f102fca381b` |
-| LISTEN_PORT  | `1234`  | `integer:1234` |
-| ADVERTISE_ONLINE  | `True` | `boolean:True\|False` |
-| PASSWORD  | `<empty>`  | `string` |
-| RECORD_REPLAYS  | `False`  | `boolean:True\|False` |
-| REQUIRE_AUTHENTICATION  | `False`  | `boolean:True\|False` |
-| PROFILE_ID_BLACKLIST  | `<empty>`  | `string:ip1,ip2,ip3` |
-| PROFILE_ID_WHITELIST  | `<empty>`  | `string:ip1,ip2,ip3` |
-| ENABLE_SINGLE_PLAYER  | `False`  | `boolean:True\|False` |
-| ENABLE_SYNC_REPORTS  | `False`  | `boolean:True\|False` |
-| ENABLE_GEOIP  | `False`  | `boolean:True\|False` |
-| ENABLE_LINT_CHECKS  | `True`  | `boolean:True\|False` |
-| SHARE_ANONYMISED_IPS  | `True`  | `boolean:True\|False` |
-| FLOOD_LIMIT_JOIN_COOLDOWN  | `5000`  | `integer:5000` |
+|  |  |   | 
+| Name  | `Dedicated AIO Server`  | `string` |
+| ~~Map~~ | ~~`<empty>`~~  | ~~`UID:ca84655d5597511d74c87d2c298bbea865a577ee`~~ |
+| ListenPort  | `1234`  | `integer:1234` |
+| AdvertiseOnline  | `True` | `boolean:True\|False` |
+| Password  | `<empty>`  | `string` |
+| RecordReplays  | `False`  | `boolean:True\|False` |
+| RequireAuthentication  | `False`  | `boolean:True\|False` |
+| ProfileIDBlacklist  | `<empty>`  | `string:ip1,ip2,ip3` |
+| ProfileIDWhitelist  | `<empty>`  | `string:ip1,ip2,ip3` |
+| EnableSingleplayer  | `False`  | `boolean:True\|False` |
+| EnableSyncReports  | `False`  | `boolean:True\|False` |
+| EnableGeoIP  | `False`  | `boolean:True\|False` |
+| EnableLintChecks  | `True`  | `boolean:True\|False` |
+| ShareAnonymizedIPs  | `True`  | `boolean:True\|False` |
+| FloodLimitJoinCooldown  | `5000`  | `integer:5000` |
+
+~~strikethrough~~ = not supported
 
 ## Mounting/volumes (optional)
 Regarding Docker mounts for  `/downloads` and `/support_dir`.
