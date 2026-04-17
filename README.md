@@ -35,7 +35,7 @@ $ docker run -d -p 1234:1234 \
 | MOTD  | `Welcome, have fun and good luck!`  | `string` |
 |  |  |   | 
 | Name  | `Dedicated AIO Server`  | `string` |
-| ~~Map~~ | ~~`<empty>`~~  | ~~`UID:ca84655d5597511d74c87d2c298bbea865a577ee`~~ |
+| Map¹ | `<empty>`  | `SHA:ca84655d5597511d74c87d2c298bbea865a577ee` |
 | ListenPort  | `1234`  | `integer:1234` |
 | AdvertiseOnline  | `True` | `boolean:True\|False` |
 | Password  | `<empty>`  | `string` |
@@ -50,7 +50,7 @@ $ docker run -d -p 1234:1234 \
 | ShareAnonymizedIPs  | `True`  | `boolean:True\|False` |
 | FloodLimitJoinCooldown  | `5000`  | `integer:5000` |
 
-~~strikethrough~~ = not supported
+_¹ First put the map in the /support_dir on the server. Then take the sha from https://resource.openra.net
 
 ## Mounting/volumes (optional)
 Regarding Docker mounts for  `/downloads` and `/support_dir`.
