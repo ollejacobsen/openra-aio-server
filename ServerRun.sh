@@ -30,6 +30,11 @@ SUPPORT_DIR="/${DATA_DIR}/${GAME}"
 # Create the support directory if it does not exist
 mkdir -p "$SUPPORT_DIR"
 
+# If MOTD env var is set, write it to motd.txt in the support directory for the game
+if [ -n "$MOTD" ]; then
+  echo "$MOTD" > "${SUPPORT_DIR}/motd.txt"
+fi
+
 dirSegment="openra" 
 if [ "$LAUNCH_MOD" = "hv" ]; then
         dirSegment="openhv"

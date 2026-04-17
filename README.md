@@ -34,6 +34,7 @@ $ docker run -d -p 1234:1234 \
 | RELEASE_VERSION  | `latest`  | `string:latest\|release-20250330\|playtest-20260222\|<github-release-tag>` |
 |  |  |   | 
 | NAME  | `Dedicated AIO Server`  | `string` |
+| MOTD  | `Welcome, have fun and good luck!`  | `string` |
 | MAP  | `<empty>`  | `UID:6e8f4e02-c91c-465f-b22d-7f102fca381b` |
 | LISTEN_PORT  | `1234`  | `integer:1234` |
 | ADVERTISE_ONLINE  | `True` | `boolean:True\|False` |
