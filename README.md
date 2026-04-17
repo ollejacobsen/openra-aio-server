@@ -50,7 +50,7 @@ $ docker run -d -p 1234:1234 \
 | ShareAnonymizedIPs  | `True`  | `boolean:True\|False` |
 | FloodLimitJoinCooldown  | `5000`  | `integer:5000` |
 
-_¹ First put the map in the /support_dir on the server. Then take the sha from https://resource.openra.net
+_¹ First put the map in the /support_dir on the server. Then take the sha from https://resource.openra.net_
 
 ## Mounting/volumes (optional)
 Regarding Docker mounts for  `/downloads` and `/support_dir`.
