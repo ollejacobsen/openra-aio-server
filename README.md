@@ -27,10 +27,6 @@ $ docker run -d -p 1234:1234 \
     ollebulle/openra-aio-server:latest
 ```
 
-# Docker
-
-## Variables
-
 # Docker environment variables
 | Name  | Default value | Type |
 | ------------- | ------------- |  ------------- | 
