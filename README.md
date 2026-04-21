@@ -66,13 +66,13 @@ Regarding Docker mounts for  `/downloads` and `/support_dir`.
 <br />A subdirectory will be created for each GAME.
 
 __Volume mount__ e.g., `docker run -v my_downloads:/downloads ...`
-<br />_Mounts a Docker-managed volume_
+<br />_Mounts a Docker-managed volume. Correct ownership is populated automatically_
 
 __Bind mount__ e.g., `docker run -v "$PWD/downloaded:/downloads" ...`
 <br />_Mounts a host directory_
 
-#### Important! File permissions for bind mounts
-Create the directory on the host first, then run `sudo chmod -R 777 <directory-name>`
+> [!IMPORTANT]  
+> When bind-mounting host directories (`-v "$PWD/downloaded:/downloads"`), the host directory must be owned by UID 99 and GID 100 so the service account can read and write it. Run `chown 99:100 downloaded` on the host before starting the container. The same pattern should be applied if using `-v "$PWD/data:/support_dir"`
 
 ### Multiple containers in parallel with the same mount/volume
 It's recommended to use the same mount over multiple instances of this container.
