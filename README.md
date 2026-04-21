@@ -1,10 +1,14 @@
-# OpenRA All In One - Dedicated Server
+# OpenRA All In One - Dedicated Server [![Docker](https://badgen.net/badge/icon/docker?icon=docker&label)](https://hub.docker.com/r/ollebulle/openra-aio-server)
 
 This project provides a Dockerized environment for running OpenRA-based game servers (such as Red Alert, Tiberian Dawn, Dune 2000, Tiberian Dawn HD, Combined Arms and Hard Vacuum). 
 
 The Docker image installs necessary dependencies, sets up directories for downloads and support data, and runs as a non-root user for security. The entrypoint script dynamically determines the correct game version and download URL¹, prepares the environment, and launches the appropriate game server as specified by environment variables. This setup allows for easy deployment and management of multiple OpenRA game servers in a consistent, isolated container.
 
 _¹ Pre-built AppImages downloaded directly from each project's GitHub releases._
+
+---
+
+I built this to simplify hosting and sharing data in my home environment. If you are running an OpenRA server on a cloud instance, I would personally recommend using a Docker image that is built together with the specific OpenRA version.
 
 ## Minimal recommended example
 Stores downloaded versions in the `./downloads` directory on the host.
