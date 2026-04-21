@@ -8,7 +8,8 @@ _¹ Pre-built AppImages downloaded directly from each project's GitHub releases.
 
 ---
 
-I built this to simplify hosting and sharing data in my home environment. If you are running an OpenRA server on a cloud instance, I would personally recommend using a Docker image that is built together with the specific OpenRA version.
+> [!NOTE]
+> I built this to simplify hosting and sharing data in my home environment. If you are running an OpenRA server on a cloud instance, I would personally recommend using a Docker image that is built together with the specific OpenRA version, like [m0ngr31/OpenRA-server](https://github.com/m0ngr31/OpenRA-server).
 
 ## Minimal recommended example
 Stores downloaded versions in the `./downloads` directory on the host.
