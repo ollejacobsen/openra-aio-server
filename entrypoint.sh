@@ -126,7 +126,9 @@ check_directory_permissions() {
     testfile="${dir}/.writetest"
     if ! touch "$testfile" 2>/dev/null; then
       echo "${dir_var} directory ${dir} is not writable. Check permissions."
-      echo "The folder is probably mapped from the host. An easy fix would be to run \`sudo chmod -R 777 <directory>\` on the host."
+      echo "The folder is probably mapped from the host. This is two suggestions to fix this issue:"
+      echo " 1. On host run: \`sudo chown -R 99:100 <directory>\` to set the owner to the default UID and GID used in the container (99:100)."
+      echo " 2. On host run: \`sudo chmod -R 777 <directory>\` to make the directory writable by all users."
       exit 1
     fi
     rm -f "$testfile"

@@ -18,7 +18,7 @@ Before first `docker run ...`
 __Tip:__ Read up on [Mounting/volumes (optional)](#mountingvolumes-optional) below.
 ```bash
 $ mkdir -p downloads
-$ sudo chmod -R 777 downloads
+$ sudo chown 99:100 downloads
 ``` 
 
 Then on every `docker run ...`
@@ -73,7 +73,7 @@ __Bind mount__ e.g., `docker run -v "$PWD/downloaded:/downloads" ...`
 <br />_Mounts a host directory_
 
 > [!IMPORTANT]  
-> When bind-mounting host directories (`-v "$PWD/downloaded:/downloads"`), the host directory must be owned by UID 99 and GID 100 so the service account can read and write it. Run `chown 99:100 downloaded` on the host before starting the container. The same pattern should be applied if using `-v "$PWD/data:/support_dir"`
+> When bind-mounting host directories (`-v "$PWD/downloaded:/downloads"`), the host directory must be owned by UID 99 and GID 100 so the service account can read and write it. Run `chown 99:100 $PWD/downloaded` on the host before starting the container. The same pattern should be applied if using `-v "$PWD/data:/support_dir"`
 
 ### Multiple containers in parallel with the same mount/volume
 It's recommended to use the same mount over multiple instances of this container.
